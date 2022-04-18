@@ -30,19 +30,17 @@ class MainActivity : AppCompatActivity() {
 
         when (buChose.id) {
             R.id.bu1 -> cellID = 1
-            R.id.bu1 -> cellID = 2
-            R.id.bu1 -> cellID = 3
-            R.id.bu1 -> cellID = 4
-            R.id.bu1 -> cellID = 5
-            R.id.bu1 -> cellID = 6
-            R.id.bu1 -> cellID = 7
-            R.id.bu1 -> cellID = 8
-            R.id.bu1 -> cellID = 9
+            R.id.bu2 -> cellID = 2
+            R.id.bu3 -> cellID = 3
+            R.id.bu4 -> cellID = 4
+            R.id.bu5 -> cellID = 5
+            R.id.bu6 -> cellID = 6
+            R.id.bu7 -> cellID = 7
+            R.id.bu8 -> cellID = 8
+            R.id.bu9 -> cellID = 9
         }
 
         Play1Game(cellID, buChose)
-
-
     }
 
     var player1 = ArrayList<Int>()
@@ -65,8 +63,6 @@ class MainActivity : AppCompatActivity() {
 
         buChose.isEnabled = false
         Checkwinner()
-
-
     }
 
     // Check winner using if condition
@@ -131,12 +127,12 @@ class MainActivity : AppCompatActivity() {
             winner = 2
         }
 
-        if (winner !== -1) {
-            if (winner == 1) {
+        if (winner != -1) { //not draw
+//            if (winner == 1) { ??? why
                 showAlertDialog()
-            } else {
-                showAlertDialog()
-            }
+//            } else { ??? why
+//                showAlertDialog() ??? why
+//            }
         }
 
     }
@@ -157,6 +153,6 @@ class MainActivity : AppCompatActivity() {
         alert.setCanceledOnTouchOutside(false)
         alert.show()
     }
-
+//    fun clear()
 
 }
